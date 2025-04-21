@@ -1,6 +1,7 @@
-# ЗАПУСК И УСТАНОВКА
+# Getting started
 
-Перейти в текущую директорию =>
+Execute in current directory
+(Instructions for Windows)
 ```
 python3.11 -m venv .venv
 cd .venv/Scripts

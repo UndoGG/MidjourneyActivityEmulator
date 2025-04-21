@@ -1,0 +1,10 @@
+.env
+.venv
+.idea
+.idea/
+idea
+*.pyc
+poetry.lock
+.env
+.env
+.env

@@ -1,0 +1,29 @@
+log_level: DEBUG
+max_tasks: 1
+
+consumers: 1
+# В сколько потоков работает программа.
+# Рекомендуется (max_tasks * 2) + max_tasks
+
+task:
+  ar: "1:1"  # Будет добавлен в промпт автоматически
+  prompts:
+    - "Kitten"
+    - "Dog"
+    - "Who let the dogs out wof wof wof wof wof"
+  use_buttons_range: [1, 4]  # На Imagine (u1, u2, u3, u4, v1, v2, v3, v4, reroll)
+  use_buttons_range_recursive: [1, 3]  # На рекурсивных [дочерних] (После u1, v1, reroll и тд)
+
+goapi:
+  process_mode: fast
+  http_timeout_seconds: 25
+
+  urls:
+    imagine: https://api.goapi.ai/mj/v2/imagine
+    inpaint: https://api.goapi.ai/mj/v2/inpaint
+    reroll: https://api.goapi.ai/mj/v2/reroll
+    upscale: https://api.goapi.ai/mj/v2/upscale
+    variation: https://api.goapi.ai/mj/v2/variation
+    outpaint: https://api.goapi.ai/mj/v2/outpaint
+    pan: https://api.goapi.ai/mj/v2/pan
+    fetch: https://api.goapi.ai/mj/v2/fetch
